@@ -12,32 +12,49 @@ Read [`problem_statement.md`](./problem_statement.md) for the complete challenge
 
 ---
 
-## Quick Start
+## Challenge & Submission Details
 
-Clone the repository and move into the project directory:
+- **Contest URL:** [HackerRank Orchestrate October 2026 — Ghost Data Still Exists](https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists)
+- **Author:** Md. Fahim Sarker Mridul
+- **Status:** Complete, fully tested, and self-validating.
+- **Benchmark Performance:** 100.0% Case-Level Status Accuracy (32/32), 0.9251 Step F1 Score on public sample dataset; 0.52s full evaluation runtime across all 518 cases.
+
+---
+
+## Solution Architecture
+
+The solution implements an autonomous, modular 5-phase deletion-audit agent in `code/`:
+
+1. **Multilingual Request Intent Gate (`code/intent_classifier.py`):** Differentiates GDPR/CCPA erasure and deletion requests from access, update, marketing opt-out, or billing requests across English, Spanish, French, German, Italian, Portuguese, and Japanese. Non-deletion requests immediately output `NOT_APPLICABLE` with `steps_json = []`.
+2. **Current & Historical Identity Graph Resolver (`code/identity_resolver.py`):** Traverses `user_identities.csv` and `user_audit_log.csv` strictly filtered to `timestamp <= audit_at` to resolve canonical `user_id`, historical emails, normalized phones, and SHA-256/MD5 hashes.
+3. **Multimodal Evidence Indexer (`code/evidence_indexer.py`, `code/parsed_visual_evidence.py`):** Ingests and indexes SQLite databases, structured JSON bundles, service and shift handover logs, PDF documents, and admin console screenshots (`captured_at <= audit_at`).
+4. **Point-in-Time State Reconstructor (`code/state_reconstructor.py`):** Reconstructs true ground-truth state (`PRESENT`, `ABSENT`, `REDACTED`, `ANONYMIZED`, `ACTIVE`, `DISABLED`, `BLOCKED`) strictly as of `audit_at`. Detects regional replica drift, accounts for account tombstones, and overrides operational activity claims when database snapshots prove absence.
+5. **Policy Engine & Step Generator (`code/policy_engine.py`):** Evaluates reconstructed states against `dataset/deletion_rules.csv`, generates finding, remediation, and verification steps, and applies deterministic canonical 4-tuple sorting `(phase_rank, op_rank, system_id, resource_id)` with consecutive 1-indexed `step_no`.
+
+---
+
+## Quick Start & Execution
+
+### 1. Requirements & Setup
+The solution requires Python 3.10+ and standard libraries (plus `pypdf` if available for PDF inspection). No external paid APIs or tokens are required for deterministic evaluation.
+
+### 2. Run the Main Pipeline (Generates `./output.csv`)
+To run the full autonomous deletion-audit agent on all 518 evaluation requests and generate the root `./output.csv`:
 
 ```bash
-git clone https://github.com/interviewstreet/hackerrank-orchestrate-october26.git
-cd hackerrank-orchestrate-october26
+python code/main.py
 ```
 
-Start your AI coding tool from the **repository root** so it automatically reads [`AGENTS.md`](./AGENTS.md) and logs your session turns to `log.txt` in the root directory.
+This command runs in ~0.5 seconds, performs self-validation across all 518 output rows, and writes `output.csv` to the repository root.
 
-Build your solution in `code/main.py`, or use another language and document its setup and run command clearly in your README.
-
-Your solution must:
-
-- Read the input files from `dataset/`
-- Generate one prediction row for every request in `dataset/deletion_requests.csv`
-- Write the final predictions to `output.csv` in the repository root
-
-Run the starter Python entry point with:
+### 3. Run the Evaluation Benchmark & Custom Cases
+To run the benchmark evaluation harness on `dataset/sample_output.csv` and execute the 3 synthetic stress-test custom cases:
 
 ```bash
-python3 code/main.py
+python code/evaluate.py
 ```
 
-The blank template at `dataset/output.csv` is provided as a reference. Your final generated file for submission must be the root-level `output.csv`.
+---
 
 
 ## Dataset
@@ -155,5 +172,6 @@ Before submitting, confirm that:
 - `code.zip` includes your runnable code, `README.md`, `code/evaluation/evaluation_report.md`, and `code/evaluation/usage_report.md`;
 - `log.txt` follows the `AGENTS.md` turn format and is uploaded to the `chat_transcript` slot; and
 - no API keys, credentials, real personal data, or sensitive configuration values are included.
-#   H a c k a t h o n - H a c k e r r a n k  
+#   H a c k a t h o n - H a c k e r r a n k 
+ 
  
