@@ -1,0 +1,53 @@
+EVALUATION_CASES count=200 source=data/eval/gec_dev.jsonl
+
+MODEL checkpoints/gec_stage1_v2_full
+[typo-the] category=typo clean=False latency_ms=26.30
+  source:  This is teh final document.
+  target:  This is the final document.
+  output:  This is the final document.
+  ... 199 additional cases omitted; use --show-limit 0 to print all
+SUMMARY
+  exact_match_all=107/200 (0.535)
+  error_recovery=6/80 (0.075)
+  typo_recovery=3/30 (0.100)
+  clean_unchanged=101/120 (0.842)
+  clean_false_edits=19/120 (0.158)
+  error_changed=42/80 (0.525)
+  edit_precision=0.125
+  edit_recall=0.076
+  edit_f0.5=0.111
+  mean_latency_ms=20.52
+  peak_cuda_memory_mb=161.6
+CATEGORY_SUMMARY
+  clean: exact=101/120 (0.842)
+  grammar: exact=0/30 (0.000)
+  mechanics: exact=3/20 (0.150)
+  typo: exact=3/30 (0.100)
+
+MODEL checkpoints/gec_stage1_v2_full
+[typo-the] category=typo clean=False latency_ms=24.02
+  source:  This is teh final document.
+  target:  This is the final document.
+  output:  This is the final document.
+  ... 199 additional cases omitted; use --show-limit 0 to print all
+SUMMARY
+  exact_match_all=107/200 (0.535)
+  error_recovery=6/80 (0.075)
+  typo_recovery=3/30 (0.100)
+  clean_unchanged=101/120 (0.842)
+  clean_false_edits=19/120 (0.158)
+  error_changed=42/80 (0.525)
+  edit_precision=0.125
+  edit_recall=0.076
+  edit_f0.5=0.111
+  mean_latency_ms=21.82
+  peak_cuda_memory_mb=161.7
+CATEGORY_SUMMARY
+  clean: exact=101/120 (0.842)
+  grammar: exact=0/30 (0.000)
+  mechanics: exact=3/20 (0.150)
+  typo: exact=3/30 (0.100)
+
+COMPARISON
+stage0: error_recovery=0.075 typo_recovery=0.100 clean_unchanged=0.842 precision=0.125 recall=0.076 F0.5=0.111
+stage1: error_recovery=0.075 typo_recovery=0.100 clean_unchanged=0.842 precision=0.125 recall=0.076 F0.5=0.111

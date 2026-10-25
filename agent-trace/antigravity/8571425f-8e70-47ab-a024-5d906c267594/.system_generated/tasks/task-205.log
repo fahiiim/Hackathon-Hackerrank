@@ -1,0 +1,6 @@
+Initial VRAM allocated (MB): 375.624192
+Initial VRAM reserved (MB): 413.138944
+Batch 48: time=11.667s (2.333s/step) -> 5266 tok/s | Peak VRAM: 13844.2 MB | Reserved: 15569.3 MB
+Batch 32: time=1.960s (0.392s/step) -> 20901 tok/s | Peak VRAM: 9663.5 MB | Reserved: 11135.9 MB
+Batch 24: time=1.922s (0.384s/step) -> 15982 tok/s | Peak VRAM: 7578.4 MB | Reserved: 8961.1 MB
+Batch 16: time=1.159s (0.232s/step) -> 17673 tok/s | Peak VRAM: 5486.2 MB | Reserved: 6278.9 MB

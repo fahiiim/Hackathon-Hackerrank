@@ -1,0 +1,5 @@
+Generating Stage 2 GEC dataset from data/processed/gec/clean_subset.jsonl...
+wrote 145918 GEC units -> data/processed/gec/v3/train.jsonl
+corruption_prob=0.8 min_ops=1 max_ops=2 max_unit_chars=384
+edit maps -> data\processed\gec\v3\edit_maps.json
+Dataset generated in 147.9s -> data/processed/gec/v3/train.jsonl

@@ -1,0 +1,48 @@
+C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\export.py:51: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(
+W1022 12:08:33.351000 2988 .venv\Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:110] torchvision is not installed. Skipping torchvision::nms
+W1022 12:08:33.353000 2988 .venv\Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:110] torchvision is not installed. Skipping torchvision::roi_align
+W1022 12:08:33.353000 2988 .venv\Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:110] torchvision is not installed. Skipping torchvision::roi_pool
+W1022 12:08:33.353000 2988 .venv\Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:110] torchvision is not installed. Skipping torchvision::deform_conv2d
+W1022 12:08:34.056000 2988 .venv\Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\torch\onnx\_internal\exporter\_onnx_program.py:487: UserWarning: # The axis name: batch will not be used, since it shares the same shape constraints with another axis: batch.
+  rename_mapping = _dynamic_shapes.create_rename_mapping(
+C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\torch\onnx\_internal\exporter\_onnx_program.py:487: UserWarning: # The axis name: seq will not be used, since it shares the same shape constraints with another axis: seq.
+  rename_mapping = _dynamic_shapes.create_rename_mapping(
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\cli.py", line 212, in <module>
+    main()
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\cli.py", line 208, in main
+    args.func(args)
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\cli.py", line 97, in cmd_export
+    quantize_onnx(exported, getattr(args, "quantize_out", None))
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\export.py", line 74, in quantize_onnx
+    quantize_dynamic(
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\onnxruntime\quantization\quantize.py", line 1000, in quantize_dynamic
+    quantizer = ONNXQuantizer(
+                ^^^^^^^^^^^^^^
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\onnxruntime\quantization\onnx_quantizer.py", line 72, in __init__
+    model = save_and_reload_model_with_shape_infer(self.model.model)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\onnxruntime\quantization\quant_utils.py", line 1253, in save_and_reload_model_with_shape_infer
+    return load_model_with_shape_infer(model_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\onnxruntime\quantization\quant_utils.py", line 1241, in load_model_with_shape_infer
+    onnx.shape_inference.infer_shapes_path(str(model_path), str(inferred_model_path))
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\onnx\shape_inference.py", line 108, in infer_shapes_path
+    C.infer_shapes_path(model_path, output_path, check_type, strict_mode, data_prop)
+onnx.onnx_cpp2py_export.shape_inference.InferenceError: [ShapeInferenceError] Inferred shape and existing shape differ in dimension 0: (96) vs (512)
+[torch.onnx] Obtain model graph for `_ExportWrapper([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `_ExportWrapper([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decompositions...
+[torch.onnx] Run decompositions... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+[torch.onnx] Optimize the ONNX graph...
+[torch.onnx] Optimize the ONNX graph... ✅
+exported ONNX -> export\gec_stage1.onnx

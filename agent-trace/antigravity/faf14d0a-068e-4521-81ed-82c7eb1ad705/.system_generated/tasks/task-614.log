@@ -1,0 +1,10 @@
+Name                            Id                           Version                 Source
+--------------------------------------------------------------------------------------------
+Microsoft .NET SDK 10.0         Microsoft.DotNet.SDK.10      10.0.402                winget
+Microsoft .NET SDK 3.1          Microsoft.DotNet.SDK.3_1     3.1.426                 winget
+Microsoft .NET SDK 5.0          Microsoft.DotNet.SDK.5       5.0.408                 winget
+Microsoft .NET SDK 6.0          Microsoft.DotNet.SDK.6       6.0.428                 winget
+Microsoft .NET SDK 7.0          Microsoft.DotNet.SDK.7       7.0.410                 winget
+Microsoft .NET SDK 8.0          Microsoft.DotNet.SDK.8       8.0.426                 winget
+Microsoft .NET SDK 9.0          Microsoft.DotNet.SDK.9       9.0.319                 winget
+Microsoft .NET SDK 11.0 Preview Microsoft.DotNet.SDK.Preview 11.0.100-rc.2.26504.105 winget

@@ -1,0 +1,2 @@
+Batch 24 x 4 (eff=96): 0.625s/step | 39324 tok/s | Peak VRAM: 7953.2 MB (Reserved: 9011.5 MB) | Total 5000 steps: 52.1 mins
+Batch 32 x 3 (eff=96): 0.639s/step | 38481 tok/s | Peak VRAM: 10038.9 MB (Reserved: 11024.7 MB) | Total 5000 steps: 53.2 mins

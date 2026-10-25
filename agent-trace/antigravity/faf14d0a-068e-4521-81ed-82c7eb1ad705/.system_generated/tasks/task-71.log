@@ -1,0 +1,22 @@
+usage: evaluate_gec.py [-h] [--stage0 STAGE0] [--stage1 STAGE1]
+                       [--tokenizer TOKENIZER] [--maps MAPS]
+                       [--device {auto,cpu,cuda}]
+                       [--min-edit-prob MIN_EDIT_PROB]
+                       [--edit-margin EDIT_MARGIN] [--cases CASES]
+                       [--show-limit SHOW_LIMIT]
+
+Compare fixed GEC cases across checkpoints
+
+options:
+  -h, --help            show this help message and exit
+  --stage0 STAGE0
+  --stage1 STAGE1
+  --tokenizer TOKENIZER
+  --maps MAPS
+  --device {auto,cpu,cuda}
+  --min-edit-prob MIN_EDIT_PROB
+  --edit-margin EDIT_MARGIN
+  --cases CASES         JSONL held-out cases; defaults to the 16-case smoke
+                        suite
+  --show-limit SHOW_LIMIT
+                        rows shown per model; 0 shows all

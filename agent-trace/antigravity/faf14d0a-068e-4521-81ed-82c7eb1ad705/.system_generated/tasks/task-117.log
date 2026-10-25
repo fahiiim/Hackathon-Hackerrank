@@ -1,0 +1,3 @@
+wrote 145918 GEC units -> data/processed/gec/v2/train.jsonl
+corruption_prob=0.85 min_ops=1 max_ops=2 max_unit_chars=384
+edit maps -> data\processed\gec\v2\edit_maps.json

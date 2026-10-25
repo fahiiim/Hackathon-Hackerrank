@@ -1,0 +1,29 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+=== Building Rich Multi-Domain v4 Dataset (Target: 500,000 units) ===
+[corpus] Reading existing clean text from data\processed\lm\train.jsonl...
+[corpus] Loaded 50000 baseline documents.
+[corpus] Adding 15000 conversational anchors...
+[corpus] Streaming FineWeb-Edu up to 55000 clean chunks...
+  ... 10000/55000 FineWeb chunks collected
+  ... 20000/55000 FineWeb chunks collected
+  ... 30000/55000 FineWeb chunks collected
+  ... 40000/55000 FineWeb chunks collected
+  ... 50000/55000 FineWeb chunks collected
+[corpus] Total clean documents gathered: 120,000
+[corpus] Extracting sentence units and building frequency maps...
+[corpus] Gathered 303,283 clean sentence units (16,804,629 total tokens).
+[maps] Saved edit maps (replace=4096, append=2048) -> data\processed\gec\v4\edit_maps.json
+[lm] Writing enriched LM corpus -> data/processed/lm/train_v4.jsonl...
+[gec] Generating GEC paired dataset -> data/processed/gec/v4/train.jsonl...
+  ... 50,000/303,283 GEC units processed
+  ... 100,000/303,283 GEC units processed
+  ... 150,000/303,283 GEC units processed
+  ... 200,000/303,283 GEC units processed
+  ... 250,000/303,283 GEC units processed
+  ... 300,000/303,283 GEC units processed
+
+[DONE] Successfully built rich v4 dataset in 288.0s (4.8 mins)!
+  LM Corpus:  data/processed/lm/train_v4.jsonl (303,283 sentences)
+  GEC Corpus: data/processed/gec/v4/train.jsonl (303,283 paired examples)
+  Edit Maps:  data\processed\gec\v4\edit_maps.json

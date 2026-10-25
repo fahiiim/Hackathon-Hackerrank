@@ -1,0 +1,46 @@
+C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\export.py:38: UserWarning: Exporting a model while it is in training mode. Please ensure that this is intended, as it may lead to different behavior during inference. Calling model.eval() before export is recommended.
+  torch.onnx.export(
+C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\export.py:38: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(
+W1022 12:06:26.084000 22264 .venv\Lib\site-packages\torch\onnx\_internal\exporter\_compat.py:133] Setting ONNX exporter to use operator set version 18 because the requested opset_version 17 is a lower version than we have implementations for. Automatic version conversion will be performed, which may not be successful at converting to the requested version. If version conversion is unsuccessful, the opset version of the exported model will be kept at 18. Please consider setting opset_version >=18 to leverage latest ONNX features
+W1022 12:06:27.024000 22264 .venv\Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:110] torchvision is not installed. Skipping torchvision::nms
+W1022 12:06:27.025000 22264 .venv\Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:110] torchvision is not installed. Skipping torchvision::roi_align
+W1022 12:06:27.026000 22264 .venv\Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:110] torchvision is not installed. Skipping torchvision::roi_pool
+W1022 12:06:27.026000 22264 .venv\Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:110] torchvision is not installed. Skipping torchvision::deform_conv2d
+W1022 12:06:27.845000 22264 .venv\Lib\site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\cli.py", line 206, in <module>
+    main()
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\cli.py", line 202, in main
+    args.func(args)
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\cli.py", line 95, in cmd_export
+    export_onnx(args.run, args.out, task=args.task, seq_len=args.seq_len)
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\export.py", line 38, in export_onnx
+    torch.onnx.export(
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\torch\onnx\__init__.py", line 291, in export
+    return _compat.export_compat(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\torch\onnx\_internal\exporter\_compat.py", line 161, in export_compat
+    onnx_program = _core.export(
+                   ^^^^^^^^^^^^^
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\torch\onnx\_internal\exporter\_flags.py", line 27, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\torch\onnx\_internal\exporter\_core.py", line 1376, in export
+    result = strategy(model, args, kwargs, dynamic_shapes=dynamic_shapes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\torch\onnx\_internal\exporter\_capture_strategies.py", line 129, in __call__
+    self._success(model)
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\torch\onnx\_internal\exporter\_capture_strategies.py", line 253, in _success
+    self._verbose_print(
+  File "C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Lib\site-packages\torch\onnx\_internal\exporter\_capture_strategies.py", line 31, in <lambda>
+    return lambda *args, **kwargs: print("[torch.onnx]", *args, **kwargs)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 95: character maps to <undefined>
+[torch.onnx] Obtain model graph for `_ExportWrapper([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] 

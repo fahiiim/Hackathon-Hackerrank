@@ -1,0 +1,85 @@
+EVALUATION_CASES count=200 source=data/eval/gec_dev.jsonl
+
+MODEL checkpoints/gec_stage0
+[typo-the] category=typo clean=False latency_ms=15.73
+  source:  This is teh final document.
+  target:  This is the final document.
+  output:  This is the his final document.
+[clean-typo-the] category=clean clean=True latency_ms=16.10
+  source:  This is the final document.
+  target:  This is the final document.
+  output:  This is the final document.
+[typo-receive] category=typo clean=False latency_ms=13.41
+  source:  Please recieve the package today.
+  target:  Please receive the package today.
+  output:  Please rec the package today.
+[clean-typo-receive] category=clean clean=True latency_ms=13.65
+  source:  Please receive the package today.
+  target:  Please receive the package today.
+  output:  Please receive the package today.
+[typo-separate] category=typo clean=False latency_ms=21.55
+  source:  Keep the files in seperate folders.
+  target:  Keep the files in separate folders.
+  output:  the files in se fold.
+  ... 195 additional cases omitted; use --show-limit 0 to print all
+SUMMARY
+  exact_match_all=57/200 (0.285)
+  error_recovery=1/80 (0.013)
+  typo_recovery=0/30 (0.000)
+  clean_unchanged=56/120 (0.467)
+  clean_false_edits=64/120 (0.533)
+  error_changed=53/80 (0.662)
+  edit_precision=0.000
+  edit_recall=0.000
+  edit_f0.5=0.000
+  mean_latency_ms=15.25
+  peak_cuda_memory_mb=106.0
+CATEGORY_SUMMARY
+  clean: exact=56/120 (0.467)
+  grammar: exact=0/30 (0.000)
+  mechanics: exact=1/20 (0.050)
+  typo: exact=0/30 (0.000)
+
+MODEL checkpoints/gec_stage1_repaired
+[typo-the] category=typo clean=False latency_ms=28.12
+  source:  This is teh final document.
+  target:  This is the final document.
+  output:  This is theh final document.
+[clean-typo-the] category=clean clean=True latency_ms=32.96
+  source:  This is the final document.
+  target:  This is the final document.
+  output:  This is the final document.
+[typo-receive] category=typo clean=False latency_ms=20.48
+  source:  Please recieve the package today.
+  target:  Please receive the package today.
+  output:  Please recieve the package today.
+[clean-typo-receive] category=clean clean=True latency_ms=20.01
+  source:  Please receive the package today.
+  target:  Please receive the package today.
+  output:  Please receive the package today.
+[typo-separate] category=typo clean=False latency_ms=23.98
+  source:  Keep the files in seperate folders.
+  target:  Keep the files in separate folders.
+  output:  Kep the files in seperate folders.
+  ... 195 additional cases omitted; use --show-limit 0 to print all
+SUMMARY
+  exact_match_all=99/200 (0.495)
+  error_recovery=1/80 (0.013)
+  typo_recovery=0/30 (0.000)
+  clean_unchanged=98/120 (0.817)
+  clean_false_edits=22/120 (0.183)
+  error_changed=27/80 (0.338)
+  edit_precision=0.000
+  edit_recall=0.000
+  edit_f0.5=0.000
+  mean_latency_ms=17.09
+  peak_cuda_memory_mb=161.7
+CATEGORY_SUMMARY
+  clean: exact=98/120 (0.817)
+  grammar: exact=0/30 (0.000)
+  mechanics: exact=1/20 (0.050)
+  typo: exact=0/30 (0.000)
+
+COMPARISON
+stage0: error_recovery=0.013 typo_recovery=0.000 clean_unchanged=0.467 precision=0.000 recall=0.000 F0.5=0.000
+stage1: error_recovery=0.013 typo_recovery=0.000 clean_unchanged=0.817 precision=0.000 recall=0.000 F0.5=0.000

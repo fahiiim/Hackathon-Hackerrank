@@ -1,0 +1,33 @@
+  Determining projects to restore...
+  Writing C:\Users\Md Fahim Sarker\AppData\Local\Temp\tmpwfvnc5.tmp
+info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
+info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
+info : Adding PackageReference for package 'Microsoft.ML.OnnxRuntime' into project 'app/TyPoTaKer.Desktop/TyPoTaKer.Desktop.csproj'.
+info : Restoring packages for C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\app\TyPoTaKer.Desktop\TyPoTaKer.Desktop.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.ml.onnxruntime/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.ml.onnxruntime/index.json 94ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.ml.onnxruntime/1.20.1/microsoft.ml.onnxruntime.1.20.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.ml.onnxruntime/1.20.1/microsoft.ml.onnxruntime.1.20.1.nupkg 129ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.ml.onnxruntime.managed/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.ml.onnxruntime.managed/index.json 98ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.ml.onnxruntime.managed/1.20.1/microsoft.ml.onnxruntime.managed.1.20.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.ml.onnxruntime.managed/1.20.1/microsoft.ml.onnxruntime.managed.1.20.1.nupkg 71ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.memory/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/system.memory/index.json 38ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.memory/4.5.5/system.memory.4.5.5.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.memory/4.5.5/system.memory.4.5.5.nupkg 9ms
+info : Installed Microsoft.ML.OnnxRuntime.Managed 1.20.1 from https://api.nuget.org/v3/index.json to C:\Users\Md Fahim Sarker\.nuget\packages\microsoft.ml.onnxruntime.managed\1.20.1 with content hash +EVcEcKdq3gkw6iu8TYl2coJxfPnMi1YQc6eZ80BGNlw6mbBCxNGe6h4udDCwENYWsXFvYjoBc6412t40tl4ew==.
+info : Installed System.Memory 4.5.5 from https://api.nuget.org/v3/index.json to C:\Users\Md Fahim Sarker\.nuget\packages\system.memory\4.5.5 with content hash XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==.
+info : Installed Microsoft.ML.OnnxRuntime 1.20.1 from https://api.nuget.org/v3/index.json to C:\Users\Md Fahim Sarker\.nuget\packages\microsoft.ml.onnxruntime\1.20.1 with content hash NzUD79BC6R7TKROLyB3XCzXTpbNZ1YfOdVbult7hoFvd/xyRecOMiRO5HTzkPXvaFlcvZ91+WNCiroAPzUE7Dw==.
+info :   GET https://api.nuget.org/v3/vulnerabilities/index.json
+info :   OK https://api.nuget.org/v3/vulnerabilities/index.json 260ms
+info :   GET https://api.nuget.org/v3-vulnerabilities/2026.10.19.23.33.13/vulnerability.base.json
+info :   GET https://api.nuget.org/v3-vulnerabilities/2026.10.19.23.33.13/2026.10.22.05.33.26/vulnerability.update.json
+info :   OK https://api.nuget.org/v3-vulnerabilities/2026.10.19.23.33.13/vulnerability.base.json 257ms
+info :   OK https://api.nuget.org/v3-vulnerabilities/2026.10.19.23.33.13/2026.10.22.05.33.26/vulnerability.update.json 287ms
+info : Package 'Microsoft.ML.OnnxRuntime' is compatible with all the specified frameworks in project 'app/TyPoTaKer.Desktop/TyPoTaKer.Desktop.csproj'.
+info : PackageReference for package 'Microsoft.ML.OnnxRuntime' version '1.20.1' added to file 'C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\app\TyPoTaKer.Desktop\TyPoTaKer.Desktop.csproj'.
+info : Generating MSBuild file C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\app\TyPoTaKer.Desktop\obj\TyPoTaKer.Desktop.csproj.nuget.g.props.
+info : Generating MSBuild file C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\app\TyPoTaKer.Desktop\obj\TyPoTaKer.Desktop.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\app\TyPoTaKer.Desktop\obj\project.assets.json
+log  : Restored C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\app\TyPoTaKer.Desktop\TyPoTaKer.Desktop.csproj (in 10.14 sec).

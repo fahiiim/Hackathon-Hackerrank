@@ -1,0 +1,10 @@
+Successfully scheduled one-shot timer.
+Expected to fire at: 2026-10-22T11:05:51+06:00
+Prompt: Check Ablation A final completion
+Early Termination: faf14d0a-068e-4521-81ed-82c7eb1ad705/task-213
+
+[2026-10-22T11:05:16+06:00] Still waiting. Remaining time: 35s
+[2026-10-22T11:05:26+06:00] Still waiting. Remaining time: 25s
+[2026-10-22T11:05:36+06:00] Still waiting. Remaining time: 15s
+[2026-10-22T11:05:46+06:00] Still waiting. Remaining time: 5s
+[2026-10-22T11:05:49+06:00] Timer cancelled: agent received a message during wait.

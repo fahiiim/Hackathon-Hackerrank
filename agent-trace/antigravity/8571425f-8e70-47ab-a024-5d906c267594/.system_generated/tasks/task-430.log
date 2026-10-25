@@ -1,0 +1,19 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+=== Building Rich Multi-Domain v4 Dataset (Target: 100 units) ===
+[corpus] Reading existing clean text from data\processed\lm\train.jsonl...
+[corpus] Loaded 50000 baseline documents.
+[corpus] Adding 15000 conversational anchors...
+[corpus] Streaming FineWeb-Edu up to 55000 clean chunks...
+[warn] Could not stream additional FineWeb text (chunk_document() got an unexpected keyword argument 'min_chars'); using local corpus
+[corpus] Total clean documents gathered: 65,000
+[corpus] Extracting sentence units and building frequency maps...
+[corpus] Gathered 100 clean sentence units (5,799 total tokens).
+[maps] Saved edit maps (replace=957, append=957) -> data\processed\gec\v4_test\edit_maps.json
+[lm] Writing enriched LM corpus -> data/processed/lm/train_v4_test.jsonl...
+[gec] Generating GEC paired dataset -> data/processed/gec/v4_test/train.jsonl...
+
+[DONE] Successfully built rich v4 dataset in 22.8s (0.4 mins)!
+  LM Corpus:  data/processed/lm/train_v4_test.jsonl (100 sentences)
+  GEC Corpus: data/processed/gec/v4_test/train.jsonl (100 paired examples)
+  Edit Maps:  data\processed\gec\v4_test\edit_maps.json

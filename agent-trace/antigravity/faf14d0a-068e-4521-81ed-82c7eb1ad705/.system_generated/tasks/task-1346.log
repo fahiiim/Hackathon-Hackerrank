@@ -1,0 +1,3 @@
+grew 39,104,961 -> 93,888,001 params
+stage checkpoint -> checkpoints\lm_stage2\latest.json
+Next: point train YAML init_from/resume at this directory and train for up to 6h.

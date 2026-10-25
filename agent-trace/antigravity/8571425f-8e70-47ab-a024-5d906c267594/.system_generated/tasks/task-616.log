@@ -1,0 +1,10 @@
+<string>:14: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+Traceback (most recent call last):
+  File "<string>", line 14, in <module>
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0120' in position 23: character maps to <undefined>
+Token 0: id=2 piece='<bos>' top5=[(0, 0.9763), (4157, 0.0175), (4363, 0.0017), (1, 0.001), (4338, 0.0006)]
+Token 1: id=1742 piece='This' top5=[(0, 0.9992), (4101, 0.0002), (4105, 0.0001), (4123, 0.0001), (2, 0.0001)]

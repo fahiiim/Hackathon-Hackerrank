@@ -1,0 +1,5 @@
+C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\src\typotaker\models\typoformer.py:203: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if t > self.cfg.max_seq_len:
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+exported ONNX -> export\lm_stage1.onnx
+quantized ONNX (INT8) -> export\lm_stage1_int8.onnx

@@ -1,0 +1,8 @@
+Successfully scheduled one-shot timer.
+Expected to fire at: 2026-10-22T15:25:02+06:00
+Prompt: Check if Stage 2 GEC dataset generation has completed
+Early Termination: faf14d0a-068e-4521-81ed-82c7eb1ad705/task-1355
+
+[2026-10-22T15:24:42+06:00] Still waiting. Remaining time: 20s
+[2026-10-22T15:24:52+06:00] Still waiting. Remaining time: 10s
+[2026-10-22T15:25:02+06:00] Timer fired.

@@ -1,0 +1,69 @@
+EVALUATION_CASES count=200 source=data/eval/gec_dev.jsonl
+
+MODEL checkpoints/gec_stage1_ablation_b_02
+[typo-the] category=typo clean=False latency_ms=22.77
+  source:  This is teh final document.
+  target:  This is the final document.
+  output:  This is the final document.
+[clean-typo-the] category=clean clean=True latency_ms=26.51
+  source:  This is the final document.
+  target:  This is the final document.
+  output:  This is the final document.
+[typo-receive] category=typo clean=False latency_ms=23.79
+  source:  Please recieve the package today.
+  target:  Please receive the package today.
+  output:  Please rec the package today.
+  ... 197 additional cases omitted; use --show-limit 0 to print all
+SUMMARY
+  exact_match_all=108/200 (0.540)
+  error_recovery=10/80 (0.125)
+  typo_recovery=3/30 (0.100)
+  clean_unchanged=98/120 (0.817)
+  clean_false_edits=22/120 (0.183)
+  error_changed=44/80 (0.550)
+  edit_precision=0.204
+  edit_recall=0.127
+  edit_f0.5=0.182
+  mean_latency_ms=23.22
+  peak_cuda_memory_mb=161.6
+CATEGORY_SUMMARY
+  clean: exact=98/120 (0.817)
+  grammar: exact=0/30 (0.000)
+  mechanics: exact=7/20 (0.350)
+  typo: exact=3/30 (0.100)
+
+MODEL checkpoints/gec_stage1_ablation_c_01
+[typo-the] category=typo clean=False latency_ms=26.11
+  source:  This is teh final document.
+  target:  This is the final document.
+  output:  This is the final document.
+[clean-typo-the] category=clean clean=True latency_ms=27.83
+  source:  This is the final document.
+  target:  This is the final document.
+  output:  This is the final document.
+[typo-receive] category=typo clean=False latency_ms=24.27
+  source:  Please recieve the package today.
+  target:  Please receive the package today.
+  output:  Please the package today.
+  ... 197 additional cases omitted; use --show-limit 0 to print all
+SUMMARY
+  exact_match_all=93/200 (0.465)
+  error_recovery=10/80 (0.125)
+  typo_recovery=4/30 (0.133)
+  clean_unchanged=83/120 (0.692)
+  clean_false_edits=37/120 (0.308)
+  error_changed=50/80 (0.625)
+  edit_precision=0.169
+  edit_recall=0.127
+  edit_f0.5=0.159
+  mean_latency_ms=24.94
+  peak_cuda_memory_mb=161.7
+CATEGORY_SUMMARY
+  clean: exact=83/120 (0.692)
+  grammar: exact=2/30 (0.067)
+  mechanics: exact=4/20 (0.200)
+  typo: exact=4/30 (0.133)
+
+COMPARISON
+stage0: error_recovery=0.125 typo_recovery=0.100 clean_unchanged=0.817 precision=0.204 recall=0.127 F0.5=0.182
+stage1: error_recovery=0.125 typo_recovery=0.133 clean_unchanged=0.692 precision=0.169 recall=0.127 F0.5=0.159

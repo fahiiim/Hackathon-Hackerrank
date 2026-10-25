@@ -1,0 +1,32 @@
+
+======================= ONNX CPU BENCHMARK =======================
+Testing realistic keystroke latencies (batch=1) on CPU Execution Provider
+
+--- lm_stage1.onnx (LM) ---
+  File Size:      170.7 MB
+  Load Time:      897.7 ms
+  SeqLen  8:  mean=14.55 ms | p50=12.10 ms | p95=23.60 ms
+  SeqLen 16:  mean=14.64 ms | p50=12.73 ms | p95=23.53 ms
+  SeqLen 32:  mean=24.10 ms | p50=21.26 ms | p95=38.29 ms
+
+--- lm_stage1_int8.onnx (LM) ---
+  File Size:      43.1 MB
+  Load Time:      656.4 ms
+  SeqLen  8:  mean=4.85 ms | p50=4.70 ms | p95=6.33 ms
+  SeqLen 16:  mean=6.77 ms | p50=6.64 ms | p95=8.14 ms
+  SeqLen 32:  mean=10.66 ms | p50=10.48 ms | p95=12.28 ms
+
+--- gec_stage1.onnx (GEC) ---
+  File Size:      147.5 MB
+  Load Time:      513.4 ms
+  SeqLen  8:  mean=8.74 ms | p50=8.37 ms | p95=11.02 ms
+  SeqLen 16:  mean=9.59 ms | p50=9.40 ms | p95=11.47 ms
+  SeqLen 32:  mean=15.45 ms | p50=14.94 ms | p95=19.54 ms
+
+--- gec_stage1_int8.onnx (GEC) ---
+  File Size:      37.3 MB
+  Load Time:      588.6 ms
+  SeqLen  8:  mean=3.96 ms | p50=3.80 ms | p95=5.12 ms
+  SeqLen 16:  mean=6.18 ms | p50=5.98 ms | p95=7.63 ms
+  SeqLen 32:  mean=10.62 ms | p50=10.30 ms | p95=13.61 ms
+

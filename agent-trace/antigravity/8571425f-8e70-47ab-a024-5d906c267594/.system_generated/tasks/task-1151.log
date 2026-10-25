@@ -1,0 +1,22 @@
+==========================================================
+       TypoFormer - AI Keystroke Companion Installer       
+==========================================================
+
+[1/5] Stopping any running TypoFormer instances...
+[2/5] Located payload at: C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\app\bin\publish
+[3/5] Installing application to: C:\Users\Md Fahim Sarker\AppData\Local\Programs\TypoFormer
+      Copying binaries, models, and tokenizers...
+      [OK] Installation files successfully copied.
+[4/5] Creating application shortcuts...
+      [OK] Created Start Menu Shortcut: C:\Users\Md Fahim Sarker\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\TypoFormer.lnk
+      [OK] Created Desktop Shortcut: C:\Users\Md Fahim Sarker\Desktop\TypoFormer.lnk
+[5/5] Installation complete!
+
+----------------------------------------------------------
+  How to use TypoFormer:
+   1. Start typing in any Windows app (Word, Notepad, Browser).
+   2. Press [Tab] or [Ctrl + Space] to accept completions.
+   3. Select any text and right-click to run Instant Grammar Fix.
+   4. Double-click the System Tray icon to open the Control Dashboard.
+----------------------------------------------------------
+

@@ -1,0 +1,21 @@
+Collecting onnxscript
+  Downloading onnxscript-0.7.2-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: ml_dtypes in .\.venv\Lib\site-packages (from onnxscript) (0.6.0)
+Requirement already satisfied: numpy in .\.venv\Lib\site-packages (from onnxscript) (2.5.4)
+Collecting onnx_ir<2,>=0.1.16 (from onnxscript)
+  Downloading onnx_ir-1.1.0-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: onnx>=1.17 in .\.venv\Lib\site-packages (from onnxscript) (1.23.2)
+Requirement already satisfied: packaging in .\.venv\Lib\site-packages (from onnxscript) (26.3)
+Requirement already satisfied: typing_extensions>=4.10 in .\.venv\Lib\site-packages (from onnxscript) (4.16.0)
+Requirement already satisfied: sympy>=1.13 in .\.venv\Lib\site-packages (from onnx_ir<2,>=0.1.16->onnxscript) (1.14.0)
+Requirement already satisfied: protobuf>=6.31.1 in .\.venv\Lib\site-packages (from onnx>=1.17->onnxscript) (7.36.2)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in .\.venv\Lib\site-packages (from sympy>=1.13->onnx_ir<2,>=0.1.16->onnxscript) (1.3.0)
+Downloading onnxscript-0.7.2-py3-none-any.whl (754 kB)
+   ---------------------------------------- 754.2/754.2 kB 767.7 kB/s  0:00:02
+Downloading onnx_ir-1.1.0-py3-none-any.whl (192 kB)
+Installing collected packages: onnx_ir, onnxscript
+
+Successfully installed onnx_ir-1.1.0 onnxscript-0.7.2
+
+[notice] A new release of pip is available: 26.2.1 -> 26.2.2
+[notice] To update, run: C:\Users\Md Fahim Sarker\Desktop\TyPoTaKer\.venv\Scripts\python.exe -m pip install --upgrade pip

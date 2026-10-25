@@ -1,0 +1,8 @@
+Successfully scheduled one-shot timer.
+Expected to fire at: 2026-10-22T10:51:34+06:00
+Prompt: Check if GEC v2 generation is complete
+Early Termination: faf14d0a-068e-4521-81ed-82c7eb1ad705/task-117
+
+[2026-10-22T10:51:14+06:00] Still waiting. Remaining time: 20s
+[2026-10-22T10:51:24+06:00] Still waiting. Remaining time: 10s
+[2026-10-22T10:51:34+06:00] Timer fired.

@@ -1,0 +1,21 @@
+
+--- HYBRID EVALUATION (GEC + LM Candidate Rescorer) ---
+
+Source: 'I gust wanna be yours!'
+Result: FIX: 'I gust wanna be yours!' -> 'I just wanna be yours!'
+  Hybrid LM Edit: gust -> just
+
+Source: 'you can touch my nose and see the pai.'
+Result: FIX: 'you can touch my nose and see the pai.' -> 'you can touch my nose and see the pain.'
+  Hybrid LM Edit: pai -> pain
+
+Source: 'This is teh final document.'
+Result: FIX: 'This is teh final document.' -> 'This is the final document.'
+  Hybrid LM Edit: teh -> the
+
+Source: 'The quick brown fox jumps over the lazy dog.'
+Result: CLEAN
+
+Source: 'I want to wrok hard.'
+Result: FIX: 'I want to wrok hard.' -> 'I want to work hard.'
+  Hybrid LM Edit: wrok -> work

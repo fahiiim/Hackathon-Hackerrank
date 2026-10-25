@@ -1,0 +1,26 @@
+
+--- DATASET: data/processed/gec/repaired/train.jsonl ---
+Total Rows:              50,000
+Clean Identity Rows:     18,615 (37.23%)
+Total Tokens:            11,036,698
+Mean Tokens/Row:         220.7 (Median: 190)
+KEEP Labels (0):         10,958,025 (99.29%)
+NON-KEEP Labels:         78,673 (0.71%)
+  DELETE (1):            32,870 (0.30%)
+  CASE_CAP (2):          1,623
+  CASE_LOWER (3):        7
+  REPLACE (4..2051):     32,740 (0.30%)
+  APPEND (>=2052):       11,433 (0.10%)
+
+--- DATASET: data/processed/gec/v2/train.jsonl ---
+Total Rows:              145,918
+Clean Identity Rows:     22,773 (15.61%)
+Total Tokens:            10,917,427
+Mean Tokens/Row:         74.8 (Median: 82)
+KEEP Labels (0):         10,633,201 (97.40%)
+NON-KEEP Labels:         284,226 (2.60%)
+  DELETE (1):            99,624 (0.91%)
+  CASE_CAP (2):          23,554
+  CASE_LOWER (3):        0
+  REPLACE (4..2051):     131,289 (1.20%)
+  APPEND (>=2052):       29,759 (0.27%)

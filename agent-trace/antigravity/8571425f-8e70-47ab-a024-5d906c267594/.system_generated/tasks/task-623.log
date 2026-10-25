@@ -1,0 +1,237 @@
+EVALUATION_CASES count=200 source=data/eval/gec_dev.jsonl
+
+MODEL checkpoints/gec_stage2
+[typo-the] category=typo clean=False latency_ms=20.40
+  source:  This is teh final document.
+  target:  This is the final document.
+  output:  This is and final document.
+[clean-typo-the] category=clean clean=True latency_ms=23.31
+  source:  This is the final document.
+  target:  This is the final document.
+  output:  This is the final document.
+[typo-receive] category=typo clean=False latency_ms=21.49
+  source:  Please recieve the package today.
+  target:  Please receive the package today.
+  output:  Please recieve the package today.
+[clean-typo-receive] category=clean clean=True latency_ms=21.83
+  source:  Please receive the package today.
+  target:  Please receive the package today.
+  output:  Please receive the package today.
+[typo-separate] category=typo clean=False latency_ms=29.05
+  source:  Keep the files in seperate folders.
+  target:  Keep the files in separate folders.
+  output:  Kep the files in Heperate folders.
+[clean-typo-separate] category=clean clean=True latency_ms=22.28
+  source:  Keep the files in separate folders.
+  target:  Keep the files in separate folders.
+  output:  Kep the files in separate folders.
+[typo-address] category=typo clean=False latency_ms=21.99
+  source:  Confirm the delivery adress first.
+  target:  Confirm the delivery address first.
+  output:  Confirm the delivery,ress first.
+[clean-typo-address] category=clean clean=True latency_ms=22.94
+  source:  Confirm the delivery address first.
+  target:  Confirm the delivery address first.
+  output:  Confirm the delivery address first.
+[typo-definitely] category=typo clean=False latency_ms=20.83
+  source:  I will definately attend the meeting.
+  target:  I will definitely attend the meeting.
+  output:  I will definately attend the meeting.
+[clean-typo-definitely] category=clean clean=True latency_ms=22.04
+  source:  I will definitely attend the meeting.
+  target:  I will definitely attend the meeting.
+  output:  I will definitely attend the meeting.
+[typo-occurred] category=typo clean=False latency_ms=30.50
+  source:  The error occured after the update.
+  target:  The error occurred after the update.
+  output:  The error occured after the update.
+[clean-typo-occurred] category=clean clean=True latency_ms=21.87
+  source:  The error occurred after the update.
+  target:  The error occurred after the update.
+  output:  The error occurred after the update.
+[typo-environment] category=typo clean=False latency_ms=26.40
+  source:  Use a clean enviroment for testing.
+  target:  Use a clean environment for testing.
+  output:  Use a clean enent for testing.
+[clean-typo-environment] category=clean clean=True latency_ms=32.28
+  source:  Use a clean environment for testing.
+  target:  Use a clean environment for testing.
+  output:  Use a clean environment for testing.
+[typo-weird] category=typo clean=False latency_ms=23.44
+  source:  That is a wierd result.
+  target:  That is a weird result.
+  output:  That is a w result.
+[clean-typo-weird] category=clean clean=True latency_ms=24.19
+  source:  That is a weird result.
+  target:  That is a weird result.
+  output:  That is a weird result.
+[typo-because] category=typo clean=False latency_ms=24.20
+  source:  The task failed becuase the port was closed.
+  target:  The task failed because the port was closed.
+  output:  The task failed our the port was closed.
+[clean-typo-because] category=clean clean=True latency_ms=24.71
+  source:  The task failed because the port was closed.
+  target:  The task failed because the port was closed.
+  output:  The task failed because the port was closed.
+[typo-tomorrow] category=typo clean=False latency_ms=20.84
+  source:  I will send the report tomorow.
+  target:  I will send the report tomorrow.
+  output:  I will send the report tomorow.
+[clean-typo-tomorrow] category=clean clean=True latency_ms=20.62
+  source:  I will send the report tomorrow.
+  target:  I will send the report tomorrow.
+  output:  I will send the report tomorrow.
+[typo-their] category=typo clean=False latency_ms=20.40
+  source:  Thier configuration is incomplete.
+  target:  Their configuration is incomplete.
+  output:  pond configuration is incomple.
+[clean-typo-their] category=clean clean=True latency_ms=19.45
+  source:  Their configuration is incomplete.
+  target:  Their configuration is incomplete.
+  output:  Their configuration is incomple.
+[typo-until] category=typo clean=False latency_ms=17.77
+  source:  Wait untill the process finishes.
+  target:  Wait until the process finishes.
+  output:  Wait even the process finishes.
+[clean-typo-until] category=clean clean=True latency_ms=17.41
+  source:  Wait until the process finishes.
+  target:  Wait until the process finishes.
+  output:  Wait until the process finishes.
+  ... 176 additional cases omitted; use --show-limit 0 to print all
+SUMMARY
+  exact_match_all=109/200 (0.545)
+  error_recovery=2/80 (0.025)
+  typo_recovery=0/30 (0.000)
+  clean_unchanged=107/120 (0.892)
+  clean_false_edits=13/120 (0.108)
+  error_changed=32/80 (0.400)
+  edit_precision=0.029
+  edit_recall=0.013
+  edit_f0.5=0.023
+  mean_latency_ms=20.50
+  peak_cuda_memory_mb=367.1
+CATEGORY_SUMMARY
+  clean: exact=107/120 (0.892)
+  grammar: exact=0/30 (0.000)
+  mechanics: exact=2/20 (0.100)
+  typo: exact=0/30 (0.000)
+
+MODEL checkpoints/gec_stage2_v4
+[typo-the] category=typo clean=False latency_ms=29.93
+  source:  This is teh final document.
+  target:  This is the final document.
+  output:  This is the final document.
+[clean-typo-the] category=clean clean=True latency_ms=35.56
+  source:  This is the final document.
+  target:  This is the final document.
+  output:  This is the final document.
+[typo-receive] category=typo clean=False latency_ms=27.73
+  source:  Please recieve the package today.
+  target:  Please receive the package today.
+  output:  Please recieve the package today.
+[clean-typo-receive] category=clean clean=True latency_ms=27.54
+  source:  Please receive the package today.
+  target:  Please receive the package today.
+  output:  Please receive the package today.
+[typo-separate] category=typo clean=False latency_ms=23.72
+  source:  Keep the files in seperate folders.
+  target:  Keep the files in separate folders.
+  output:  Keep the files in seperate folders.
+[clean-typo-separate] category=clean clean=True latency_ms=21.19
+  source:  Keep the files in separate folders.
+  target:  Keep the files in separate folders.
+  output:  Keep the files in separate folders.
+[typo-address] category=typo clean=False latency_ms=25.32
+  source:  Confirm the delivery adress first.
+  target:  Confirm the delivery address first.
+  output:  Confirm the delivery andress first.
+[clean-typo-address] category=clean clean=True latency_ms=21.24
+  source:  Confirm the delivery address first.
+  target:  Confirm the delivery address first.
+  output:  Confirm the delivery address first.
+[typo-definitely] category=typo clean=False latency_ms=20.95
+  source:  I will definately attend the meeting.
+  target:  I will definitely attend the meeting.
+  output:  I will definately attend the meeting.
+[clean-typo-definitely] category=clean clean=True latency_ms=19.16
+  source:  I will definitely attend the meeting.
+  target:  I will definitely attend the meeting.
+  output:  I will definitely attend the meeting.
+[typo-occurred] category=typo clean=False latency_ms=19.69
+  source:  The error occured after the update.
+  target:  The error occurred after the update.
+  output:  The error occured after the update.
+[clean-typo-occurred] category=clean clean=True latency_ms=24.01
+  source:  The error occurred after the update.
+  target:  The error occurred after the update.
+  output:  The error occurred after the update.
+[typo-environment] category=typo clean=False latency_ms=18.41
+  source:  Use a clean enviroment for testing.
+  target:  Use a clean environment for testing.
+  output:  Use a clean enviroment for testing.
+[clean-typo-environment] category=clean clean=True latency_ms=18.13
+  source:  Use a clean environment for testing.
+  target:  Use a clean environment for testing.
+  output:  Use a clean environment for testing.
+[typo-weird] category=typo clean=False latency_ms=18.33
+  source:  That is a wierd result.
+  target:  That is a weird result.
+  output:  That is a wierd result.
+[clean-typo-weird] category=clean clean=True latency_ms=19.71
+  source:  That is a weird result.
+  target:  That is a weird result.
+  output:  That is a weird result.
+[typo-because] category=typo clean=False latency_ms=18.38
+  source:  The task failed becuase the port was closed.
+  target:  The task failed because the port was closed.
+  output:  The task failed becauseuase the port was closed.
+[clean-typo-because] category=clean clean=True latency_ms=19.18
+  source:  The task failed because the port was closed.
+  target:  The task failed because the port was closed.
+  output:  The task failed because the port was closed.
+[typo-tomorrow] category=typo clean=False latency_ms=19.97
+  source:  I will send the report tomorow.
+  target:  I will send the report tomorrow.
+  output:  I will send the report tomorow.
+[clean-typo-tomorrow] category=clean clean=True latency_ms=17.97
+  source:  I will send the report tomorrow.
+  target:  I will send the report tomorrow.
+  output:  I will send the report tomorrow.
+[typo-their] category=typo clean=False latency_ms=17.26
+  source:  Thier configuration is incomplete.
+  target:  Their configuration is incomplete.
+  output:  Thier configuration is incomplete.
+[clean-typo-their] category=clean clean=True latency_ms=18.86
+  source:  Their configuration is incomplete.
+  target:  Their configuration is incomplete.
+  output:  Their configuration is incomplete.
+[typo-until] category=typo clean=False latency_ms=18.02
+  source:  Wait untill the process finishes.
+  target:  Wait until the process finishes.
+  output:  Wait untill the process finishes.
+[clean-typo-until] category=clean clean=True latency_ms=17.33
+  source:  Wait until the process finishes.
+  target:  Wait until the process finishes.
+  output:  Wait until the process finishes.
+  ... 176 additional cases omitted; use --show-limit 0 to print all
+SUMMARY
+  exact_match_all=123/200 (0.615)
+  error_recovery=3/80 (0.037)
+  typo_recovery=1/30 (0.033)
+  clean_unchanged=120/120 (1.000)
+  clean_false_edits=0/120 (0.000)
+  error_changed=6/80 (0.075)
+  edit_precision=0.333
+  edit_recall=0.025
+  edit_f0.5=0.097
+  mean_latency_ms=21.48
+  peak_cuda_memory_mb=367.1
+CATEGORY_SUMMARY
+  clean: exact=120/120 (1.000)
+  grammar: exact=0/30 (0.000)
+  mechanics: exact=2/20 (0.100)
+  typo: exact=1/30 (0.033)
+
+COMPARISON
+stage0: error_recovery=0.025 typo_recovery=0.000 clean_unchanged=0.892 precision=0.029 recall=0.013 F0.5=0.023
+stage1: error_recovery=0.037 typo_recovery=0.033 clean_unchanged=1.000 precision=0.333 recall=0.025 F0.5=0.097
